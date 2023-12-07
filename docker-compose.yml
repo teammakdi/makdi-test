@@ -1,0 +1,13 @@
+---
+version: "3.2"
+services:
+  makdi-test:
+    container_name: makdi-test
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: makdi-test-local:latest
+    platform: linux/amd64
+    ports:
+      - 3000:3000
